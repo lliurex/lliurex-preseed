@@ -1,3 +1,9 @@
+lliurex-preseed (0.20) bionic; urgency=medium
+
+  * First Bionic release
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Thu, 28 Jun 2018 10:32:59 +0200
+
 lliurex-preseed (0.19) xenial; urgency=high
 
   * Removed specific netinstall preseeds from common file

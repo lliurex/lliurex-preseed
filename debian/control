@@ -2,8 +2,8 @@ Source: lliurex-preseed
 Section: admin
 Priority: optional
 Maintainer: Equipo LliureX <lliurex@gva.es>
-Build-Depends: cdbs, debhelper (>= 7), llxcfg-dev
-Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
 
 Package: lliurex-preseed-livebuild
 Pre-Depends: ${misc:Depends}
