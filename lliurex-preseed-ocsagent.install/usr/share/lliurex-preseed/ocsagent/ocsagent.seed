@@ -1,0 +1,4 @@
+# LliureX Preseed for OcsAgent
+ocsinventory-agent	ocsinventory-agent/tag	string	
+ocsinventory-agent	ocsinventory-agent/method	select	http
+ocsinventory-agent	ocsinventory-agent/server	string	172.27.104.244

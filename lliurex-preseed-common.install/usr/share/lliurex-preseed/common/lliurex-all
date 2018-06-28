@@ -1,0 +1,97 @@
+
+
+
+
+
+
+## ACROREAD 
+acroread acroread/default-viewer boolean true
+acroread-common acroread-common/default-viewer boolean true
+# AUTO_GEN is set to "n" in /etc/nbd-client
+# /dev entry for this nbd-client (number: )?
+# Ignore this note about setting up a Kerberos realm when installing the package.
+#### JAVA
+#### KERBEROS
+krb5-admin-server krb5-admin-server/newrealm note ignore
+#### LDAP-AUTH-CONFIG
+ldap-auth-config ldap-auth-config/dblogin boolean false
+ldap-auth-config ldap-auth-config/dbrootlogin boolean true
+ldap-auth-config ldap-auth-config/ldapns/base-dn string dc=lliurex,dc=net
+ldap-auth-config ldap-auth-config/ldapns/ldap-server string ldap://127.0.0.1/
+ldap-auth-config ldap-auth-config/ldapns/ldap_version select 3
+ldap-auth-config ldap-auth-config/override boolean false
+ldap-auth-config ldap-auth-config/rootbinddn string cn=lliurex,dc=lliurex,dc=net
+ldap-auth-config ldap-auth-config/rootbindpw password lliurex
+lliurex-statistics      lliurex-statistics/unattended   boolean true
+#### MOODLE
+moodle moodle/app-password-confirm     password 
+moodle moodle/create_tables note ignore
+moodle moodle/database-type    select  mysql
+moodle moodle/dba_confirm password lliurex
+moodle moodle/dba_name string root
+moodle moodle/dba_password password lliurex
+moodle moodle/db/app-user      string   
+moodle moodle/dbconfig-install boolean false
+moodle moodle/dbconfig-reinstall       boolean false
+moodle moodle/dbconfig-remove  boolean true
+moodle moodle/dbconfig-upgrade boolean true
+moodle moodle/db/dbname        string   
+moodle moodle/db_host string localhost
+moodle moodle/db_postgres_create boolean false
+moodle moodle/db_server select mysql-server
+moodle moodle/dbu_confirm password moodle
+moodle moodle/dbu_name string moodle
+moodle moodle/dbu_password password moodle
+moodle moodle/install-error    select  abort
+moodle moodle/internal/reconfiguring   boolean false
+moodle moodle/internal/skip-preseed    boolean false
+moodle moodle/missing-db-package-error select  abort
+moodle moodle/mysql/admin-pass password         
+moodle moodle/mysql/admin-user string   
+moodle moodle/mysql/app-pass   password         
+moodle moodle/mysql/method     select  Unix socket
+moodle moodle/password-confirm password         
+moodle moodle/passwords-do-not-match   error    
+moodle moodle/purge    boolean false
+moodle moodle/remote/host      select  localhost
+moodle moodle/remote/newhost   string   
+moodle moodle/remote/port      string   
+moodle moodle/remove-error     select  abort
+moodle moodle/upgrade-backup   boolean true
+moodle moodle/upgrade-error    select  abort
+moodle moodle/webserver select apache2
+moodle moodle/www      string  http://moodle
+nbd-client    nbd-client/device    string   
+nbd-client    nbd-client/extra    string    
+nbd-client    nbd-client/host    string   
+nbd-client    nbd-client/killall    boolean    false
+nbd-client    nbd-client/no-auto-config    error   
+nbd-client    nbd-client/number    string    0
+nbd-client    nbd-client/port    string   
+nbd-client    nbd-client/type    select    raw
+# Number of nbd-client connections to use:
+oracle-java6-installer	shared/accepted-oracle-license-v1-1	boolean	true
+oracle-java7-installer	shared/accepted-oracle-license-v1-1	boolean	true
+oracle-java8-installer	shared/accepted-oracle-license-v1-1	boolean	true
+# PRESEED FOR LLIUREX-STATISTICS
+# PRESEED FOR LTSP
+# Settings for LDAP authentication
+# Settings for Moodle
+sun-java5-bin	shared/accepted-sun-dlj-v1-1	boolean	true
+sun-java5-jdk	shared/accepted-sun-dlj-v1-1	boolean	true
+sun-java5-jre	shared/accepted-sun-dlj-v1-1	boolean	true
+sun-java6-bin	shared/accepted-sun-dlj-v1-1	boolean	true
+sun-java6-jdk	shared/accepted-sun-dlj-v1-1	boolean	true
+sun-java6-jre	shared/accepted-sun-dlj-v1-1	boolean	true
+# TTF Mscorefonts
+ttf-mscorefonts-installer	msttcorefonts/accepted-mscorefonts-eula	boolean	true
+ttf-mscorefonts-installer	msttcorefonts/baddldir	error	
+ttf-mscorefonts-installer	msttcorefonts/dldir	string
+ttf-mscorefonts-installer	msttcorefonts/dlurl	string	
+ttf-mscorefonts-installer	msttcorefonts/error-mscorefonts-eula	error	
+ttf-mscorefonts-installer	msttcorefonts/http_proxy	string	
+ttf-mscorefonts-installer	msttcorefonts/present-mscorefonts-eula	note	
+ttf-mscorefonts-installer	msttcorefonts/savedir	string
+# TIMEZONE
+tzdata	tzdata/Zones/Etc	select	GMT+1
+tzdata	tzdata/Areas		select	Europe

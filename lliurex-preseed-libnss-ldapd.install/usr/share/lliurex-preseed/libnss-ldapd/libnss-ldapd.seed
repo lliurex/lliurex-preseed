@@ -1,0 +1,3 @@
+# LliureX Preseed for libnss-ldapd
+
+libnss-ldapd	libnss-ldapd/nsswitch	multiselect	group, passwd, shadow

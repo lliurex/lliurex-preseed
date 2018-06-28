@@ -1,0 +1,4 @@
+# LliureX Preseed for NSLCD
+nslcd	nslcd/ldap-uris	string	ldap://server
+nslcd	nslcd/ldap-base	string dc=ma5,dc=lliurex,dc=net
+nslcd	nslcd/ldap-reqcert	select never
