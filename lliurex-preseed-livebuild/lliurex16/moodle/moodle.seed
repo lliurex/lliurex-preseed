@@ -1,0 +1,7 @@
+# LliureX Preseed for moodle 
+moodle	dbconfig-common/dbconfig-install	boolean	false
+moodle	moodle/dbconfig-install	boolean	false
+moodle	moodle/dbconfig-upgrade	boolean false
+moodle	moodle/www	string	http://moodle
+moodle	moodle/internal/skip-preseed	boolean true
+dbconfig-common	dbconfig-common/dbconfig-install	boolean	false
