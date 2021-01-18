@@ -1,3 +1,9 @@
+lliurex-preseed (0.21) focal; urgency=medium
+
+  * Focal port
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Mon, 18 Jan 2021 12:12:58 +0100
+
 lliurex-preseed (0.21) bionic; urgency=medium
 
   * Added encfs preseed setting
