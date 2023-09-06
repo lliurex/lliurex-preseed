@@ -1,0 +1,44 @@
+Source: lliurex-preseed
+Section: admin
+Priority: optional
+Maintainer: Equipo LliureX <lliurex@gva.es>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+
+Package: lliurex-preseed-livebuild
+Pre-Depends: ${misc:Depends}
+Architecture: all
+Description: LliureX Preseed for Live build 
+ Files to build iso
+
+Package: lliurex-preseed-common
+Pre-Depends: ${misc:Depends}, perl, debconf-utils
+Architecture: all
+Description: LliureX Preseed system suite
+ Simple tool to manage preseed under LliureX
+
+Package: lliurex-preseed-ocsagent
+Pre-Depends: ${misc:Depends}, lliurex-preseed-common (>= 0.4)
+Architecture: all
+Description: Simple preseed for ocs-agent
+ This is a simple preseed for ocs-agent
+
+Package: lliurex-preseed-nslcd
+Pre-Depends: ${misc:Depends}, lliurex-preseed-common (>= 0.4)
+Architecture: all
+Description: Simple preseed for nslcd
+ This is a simple preseed for nslcd
+
+Package: lliurex-preseed-moodle
+Pre-Depends: ${misc:Depends}, lliurex-preseed-common (>= 0.4)
+Architecture: all
+Description: Simple preseed for moodle
+ This is a simple preseed for moodle
+
+Package: lliurex-preseed-libnss-ldapd
+Pre-Depends: ${misc:Depends}, lliurex-preseed-common (>= 0.4)
+Architecture: all
+Description: Simple preseed for libnss-ldapd
+ This is a simple preseed for libnss-ldapd
+
+
