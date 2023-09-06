@@ -28,17 +28,3 @@ Pre-Depends: ${misc:Depends}, lliurex-preseed-common (>= 0.4)
 Architecture: all
 Description: Simple preseed for nslcd
  This is a simple preseed for nslcd
-
-Package: lliurex-preseed-moodle
-Pre-Depends: ${misc:Depends}, lliurex-preseed-common (>= 0.4)
-Architecture: all
-Description: Simple preseed for moodle
- This is a simple preseed for moodle
-
-Package: lliurex-preseed-libnss-ldapd
-Pre-Depends: ${misc:Depends}, lliurex-preseed-common (>= 0.4)
-Architecture: all
-Description: Simple preseed for libnss-ldapd
- This is a simple preseed for libnss-ldapd
-
-
