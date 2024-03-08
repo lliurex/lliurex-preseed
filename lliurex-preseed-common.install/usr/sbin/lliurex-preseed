@@ -1,40 +1,36 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env python3
+import argparse
+import subprocess as s
+import pathlib
+import os
 
-use strict;
-use Getopt::Long;
-use File::Find;
+seeds_folder = '/usr/share/lliurex-preseed'
 
-# Some values
-my $list;
-my $update;
-my @seeds_directories="/usr/share/lliurex-preseed";
+def parse_args():
+    parser = argparse.ArgumentParser(prog='lliurex preseed', description='manage lliurex preseed')
+    parser.add_argument('--list','-l',action='store_true')
+    parser.add_argument('--update','-u',action='store_true')
+    return parser.parse_args()
 
+def exec_set_selections(file_name):
+    p = s.Popen("debconf-set-selections " + file_name, shell=True, stdout=s.PIPE, stderr=s.PIPE ).communicate()
+    if len(p[0]) > 0 : print(p[0].decode('utf-8'))     
+    if len(p[1]) > 0 : print(p[1].decode('utf-8'))
 
-sub print_list
-{
-	# Files to list under @seeds_directories
-	-f && print "$File::Find::name\n";
-}
+def run(args):
+    tree = os.walk(seeds_folder)
+    action = None
+    if args.list:
+        action = print
+    elif args.update:
+        action = exec_set_selections
+    else:
+        return 
+    for ( base_path, folders, files ) in tree:
+        p_base_path = pathlib.Path(base_path)
+        for file_name in files:
+            action(str(p_base_path.joinpath(file_name)))
 
-sub update_debconf
-{
-	# Update debconf database with debconf-set-selections
-	system("debconf-set-selections $File::Find::name");
-}
-
-
-my $result = GetOptions ("list" => \$list,  
-			 "update" => \$update);
-
-# List if is necessary
-if ($list){
-	print "[DEBUG] List all files of preseed\n";
-	find(\&print_list,@seeds_directories);
-}
-
-if ($update){
-	print "[DEBUG] Update all preseed with files\n";
-	find(\&update_debconf,@seeds_directories);
-}
-
-
+if __name__ == '__main__':
+    args = parse_args()
+    run(args)
