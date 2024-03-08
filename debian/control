@@ -12,7 +12,7 @@ Description: LliureX Preseed for Live build
  Files to build iso
 
 Package: lliurex-preseed-common
-Pre-Depends: ${misc:Depends}, perl, debconf-utils
+Pre-Depends: ${misc:Depends}, python3 debconf-utils
 Architecture: all
 Description: LliureX Preseed system suite
  Simple tool to manage preseed under LliureX
