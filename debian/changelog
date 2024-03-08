@@ -1,3 +1,9 @@
+lliurex-preseed (0.34) jammy; urgency=medium
+
+  * remove perl dependency
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Fri, 08 Mar 2024 12:01:54 +0100
+
 lliurex-preseed (0.33) jammy; urgency=medium
 
   * Restored libnss-ldapd 
